@@ -70,7 +70,8 @@ namespace Ezhu.AutoUpdater
             }
 
             //更新程序复制到缓存文件夹
-            string appDir = System.IO.Path.Combine(System.Reflection.Assembly.GetEntryAssembly().Location.Substring(0, System.Reflection.Assembly.GetEntryAssembly().Location.LastIndexOf(System.IO.Path.DirectorySeparatorChar)));
+            //string appDir = System.IO.Path.Combine(System.Reflection.Assembly.GetEntryAssembly().Location.Substring(0, System.Reflection.Assembly.GetEntryAssembly().Location.LastIndexOf(System.IO.Path.DirectorySeparatorChar)));
+            string appDir = System.AppDomain.CurrentDomain.BaseDirectory == null ? "c://" : System.AppDomain.CurrentDomain.BaseDirectory;
             string updateFileDir = System.IO.Path.Combine(System.IO.Path.Combine(appDir.Substring(0, appDir.LastIndexOf(System.IO.Path.DirectorySeparatorChar))), "Update");
             if (!Directory.Exists(updateFileDir))
             {

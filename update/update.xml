@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 <UpdateInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <AppName>工作台</AppName>
-  <AppVersion>1.0.0.1</AppVersion>
+  <AppVersion>1.0.0.10</AppVersion>
   <PublishUrl />
   <FileExecuteBefore />
   <ExecuteArgumentBefore />
   <FileExecuteAfter />
   <ExecuteArgumentAfter />
   <ExecuteTimeout>0</ExecuteTimeout>
-  <Desc>乱七八糟的</Desc>
+  <Desc>
+    1、修复..........
+    2、修复..........
+    3、修复..........
+    4、修复..........
+  </Desc>
   <Package>update.zip</Package>
   <MD5>A5B37BF76AD27E3DCA0ABF44EA71B5C4</MD5>
   <DeleteFileLimits />

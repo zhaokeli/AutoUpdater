@@ -82,7 +82,7 @@ namespace Ezhu.AutoUpdater.UI
                 {
                     Action f = () =>
                     {
-                       txtProcess.Text = "开始更新程序...";
+                        txtProcess.Text = "开始更新程序...";
                     };
                     this.Dispatcher.Invoke(f);
 
@@ -95,9 +95,12 @@ namespace Ezhu.AutoUpdater.UI
 
                     //移动文件
                     //App
-                    if(Directory.Exists(System.IO.Path.Combine(tempDir,"App")))
+                    //if(Directory.Exists(System.IO.Path.Combine(tempDir,"App")))
+                    if (Directory.Exists(tempDir))
                     {
-                        CopyDirectory(System.IO.Path.Combine(tempDir,"App"),appDir);
+                        //CopyDirectory(System.IO.Path.Combine(tempDir,"App"),appDir);
+                        //去掉升级压缩目录中的app目录直接解压覆盖
+                        CopyDirectory(tempDir, appDir);
                     }
 
                     f = () =>
@@ -135,7 +138,7 @@ namespace Ezhu.AutoUpdater.UI
                                 alert.YesButton.Width = 40;
                                 alert.NoButton.Width = 40;
                             };
-                            alert.Width=300;
+                            alert.Width = 300;
                             alert.Height = 200;
                             alert.ShowDialog();
                             if (alert.YesBtnSelected)
@@ -149,7 +152,7 @@ namespace Ezhu.AutoUpdater.UI
                             }
                             else
                             {
- 
+
                             }
                             this.Close();
                         };
@@ -206,6 +209,6 @@ namespace Ezhu.AutoUpdater.UI
             {
                 throw new Exception("复制文件错误");
             }
-        } 
+        }
     }
 }
