@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdater", "AutoUpdater\AutoUpdater.csproj", "{4CEADF71-8032-47FE-A357-D6F4023261CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{DE7070D8-4FB9-4F7F-B3AE-2500073D6852}"
@@ -19,16 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Debug|x86.ActiveCfg = Debug|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Debug|x86.Build.0 = Debug|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Release|Any CPU.ActiveCfg = Release|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Release|Mixed Platforms.Build.0 = Release|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Release|x86.ActiveCfg = Release|x86
-		{F7A3182D-20A8-4AB9-ADB5-FC7E219B154A}.Release|x86.Build.0 = Release|x86
 		{4CEADF71-8032-47FE-A357-D6F4023261CF}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{4CEADF71-8032-47FE-A357-D6F4023261CF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{4CEADF71-8032-47FE-A357-D6F4023261CF}.Debug|Mixed Platforms.Build.0 = Debug|x86
