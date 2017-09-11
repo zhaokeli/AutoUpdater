@@ -13,9 +13,9 @@ namespace Ezhu.AutoUpdater
         {
             if (args.Length == 0)
             {
-                //Ezhu.AutoUpdater.App app = new Ezhu.AutoUpdater.App();
-                //UI.DownFileProcess downUI = new UI.DownFileProcess("", "", "", "", "", "");
-                //app.Run(downUI);
+                Ezhu.AutoUpdater.App app = new Ezhu.AutoUpdater.App();
+                UI.DownFileProcess downUI = new UI.DownFileProcess("", "", "", "", "", "");
+                app.Run(downUI);
 
 
                 //MessageBox.Show("无参数");

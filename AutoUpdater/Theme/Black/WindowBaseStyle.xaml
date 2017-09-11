@@ -14,6 +14,7 @@
         <Setter Property="DockPanel.Dock" Value="Top"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
         <Setter Property="Padding" Value="10,5,10,5"></Setter>
+        <Setter Property="Margin" Value="0,0,0,10"></Setter>
     </Style>
 
     <!--最小化按钮样式-->
@@ -83,7 +84,7 @@
                 <ControlTemplate TargetType="Button">
                     <Grid>
                         <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Background="Transparent" Width="{TemplateBinding Width}">
-                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  HorizontalAlignment="Center" Padding="10 5 10 5"  Margin="10 0 3 10" Foreground="White"></TextBlock>
+                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  HorizontalAlignment="Center" Padding="10 5 10 5"  Margin="10 3 10 3" Foreground="White"></TextBlock>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -132,12 +133,13 @@
             <Border x:Name="borderBg" Margin="5" Background="#000000" BorderBrush="#ffffff" Opacity=".8" BorderThickness="2" CornerRadius="{StaticResource winCorner}" Style="{StaticResource winStyle}">
                 <Grid>
                     <Grid.RowDefinitions>
+                        <!--边框线的高度-->
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="1"></RowDefinition>
-                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="0"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Border Grid.Row="0" Background="#4f535d" CornerRadius="{StaticResource winTitleCorner}" Style="{StaticResource titleStyle}"></Border>
+                    <Border Grid.Row="0" Background="#4f535d" Opacity=".5" CornerRadius="{StaticResource winTitleCorner}" Style="{StaticResource titleStyle}"></Border>
                     <Canvas Grid.Row="2" Background="#42464d"></Canvas>
                     <Border Grid.Row="3" CornerRadius="{StaticResource winStatusCorner}"></Border>
                 </Grid>
@@ -148,13 +150,13 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="1"></RowDefinition>
-                    <RowDefinition Height="42"></RowDefinition>
+                    <RowDefinition Height="45"></RowDefinition>
                 </Grid.RowDefinitions>
                 <!--标题栏框-->
                 
                 <Border x:Name="borderTitle" Grid.Row="0" CornerRadius="{StaticResource winTitleCorner}" Style="{StaticResource titleStyle}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                     <Grid Background="Transparent">
-                        <TextBlock Text="{Binding ElementName=w, Path=Title}" Foreground="White" Opacity=".75" HorizontalAlignment="Left"></TextBlock>
+                        <TextBlock Background="Transparent" Text="{Binding ElementName=w, Path=Title}" Foreground="White"  HorizontalAlignment="Left"></TextBlock>
                         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden"
                         Orientation="Horizontal">
                             <!--关闭按钮-->
