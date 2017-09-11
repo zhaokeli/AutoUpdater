@@ -23,6 +23,11 @@ namespace Ezhu.AutoUpdater.UI
 
                 this.YesButton.Click += (sender, e) =>
                 {
+                    this.txtProcess.Text = "准备下载...";
+                    //Action f = () =>
+                    //{
+                    //    txtProcess.Text = "开始准备下载...";
+                    //};
                     Process[] processes = Process.GetProcessesByName(this.callExeName);
 
                     if (processes.Length > 0)
@@ -63,6 +68,8 @@ namespace Ezhu.AutoUpdater.UI
 
         public void DownloadUpdateFile()
         {
+
+           
             string url = Constants.RemoteUrl + callExeName + "/update.zip";
             var client = new System.Net.WebClient();
             client.DownloadProgressChanged += (sender, e) =>
@@ -121,6 +128,7 @@ namespace Ezhu.AutoUpdater.UI
                         }
                         catch (Exception ex)
                         {
+                            Console.WriteLine(ex);
                             //MessageBox.Show(ex.Message);
                         }
 
@@ -160,6 +168,7 @@ namespace Ezhu.AutoUpdater.UI
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine(ex);
                         //MessageBox.Show(ex.Message);
                     }
                 });
@@ -207,6 +216,7 @@ namespace Ezhu.AutoUpdater.UI
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 throw new Exception("复制文件错误");
             }
         }
