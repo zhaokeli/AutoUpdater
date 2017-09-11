@@ -83,7 +83,7 @@
                 <ControlTemplate TargetType="Button">
                     <Grid>
                         <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Background="Transparent" Width="{TemplateBinding Width}">
-                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  HorizontalAlignment="Center" Margin="3 0 3 0" Foreground="White"></TextBlock>
+                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  HorizontalAlignment="Center" Padding="10 5 10 5"  Margin="10 0 3 10" Foreground="White"></TextBlock>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -135,7 +135,7 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="1"></RowDefinition>
-                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" Background="#4f535d" CornerRadius="{StaticResource winTitleCorner}" Style="{StaticResource titleStyle}"></Border>
                     <Canvas Grid.Row="2" Background="#42464d"></Canvas>
@@ -148,7 +148,7 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="1"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="42"></RowDefinition>
                 </Grid.RowDefinitions>
                 <!--标题栏框-->
                 

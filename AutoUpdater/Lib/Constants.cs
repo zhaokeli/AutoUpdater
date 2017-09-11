@@ -6,6 +6,6 @@ namespace Ezhu.AutoUpdater
 {
     public class Constants
     {
-        public static readonly string RemoteUrl = "http://test.loc/";
+        public static readonly string RemoteUrl = "http://update.59vip.cn/";
     }
 }
