@@ -13,6 +13,7 @@ namespace Ezhu.AutoUpdater.UI
         private string appName;
         private string appVersion;
         private string desc;
+        private bool isUpdateIng = false;//是否正在更新中
         public DownFileProcess(string callExeName, string updateFileDir, string appDir, string appName, string appVersion, string desc)
         {
             InitializeComponent();
@@ -23,7 +24,14 @@ namespace Ezhu.AutoUpdater.UI
 
                 this.YesButton.Click += (sender, e) =>
                 {
-                    this.txtProcess.Text = "准备下载...";
+                    if (isUpdateIng)
+                    {
+                        return;
+                    }else
+                    {
+                        isUpdateIng = true;
+                    }
+                    this.txtProcess.Text = "正在准备下载...";
                     //Action f = () =>
                     //{
                     //    txtProcess.Text = "开始准备下载...";
@@ -37,8 +45,8 @@ namespace Ezhu.AutoUpdater.UI
                             p.Kill();
                         }
                     }
+                    System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(DownloadUpdateFile));
 
-                    DownloadUpdateFile();
                 };
 
                 this.NoButton.Click += (sender, e) =>
@@ -66,7 +74,7 @@ namespace Ezhu.AutoUpdater.UI
             }
         }
 
-        public void DownloadUpdateFile()
+        public void DownloadUpdateFile(Object stateInfo)
         {
 
            
@@ -78,13 +86,20 @@ namespace Ezhu.AutoUpdater.UI
             };
             client.DownloadDataCompleted += (sender, e) =>
             {
+                isUpdateIng = false;
                 string zipFilePath = System.IO.Path.Combine(updateFileDir, "update.zip");
-                byte[] data = e.Result;
-                BinaryWriter writer = new BinaryWriter(new FileStream(zipFilePath, FileMode.OpenOrCreate));
-                writer.Write(data);
-                writer.Flush();
-                writer.Close();
-
+                try
+                {
+                    byte[] data = e.Result;
+                    BinaryWriter writer = new BinaryWriter(new FileStream(zipFilePath, FileMode.OpenOrCreate));
+                    writer.Write(data);
+                    writer.Flush();
+                    writer.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
                 System.Threading.ThreadPool.QueueUserWorkItem((s) =>
                 {
                     Action f = () =>
@@ -187,8 +202,13 @@ namespace Ezhu.AutoUpdater.UI
         public void UpdateProcess(long current, long total)
         {
             string status = (int)((float)current * 100 / (float)total) + "%";
-            this.txtProcess.Text = status;
-            rectProcess.Width = ((float)current / (float)total) * bProcess.ActualWidth;
+            Action f = () =>
+            {
+                this.txtProcess.Text = status;
+                rectProcess.Width = ((float)current / (float)total) * bProcess.ActualWidth;
+            };
+            this.Dispatcher.Invoke(f);
+           
         }
 
         public void CopyDirectory(string sourceDirName, string destDirName)
