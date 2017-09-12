@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Ezhu.AutoUpdater
+namespace Ank.AutoUpdater
 {
     /// <summary>
     /// 升级信息的具体包装

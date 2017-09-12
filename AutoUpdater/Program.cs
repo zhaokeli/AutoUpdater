@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace Ezhu.AutoUpdater
+namespace Ank.AutoUpdater
 {
     class Program
     {

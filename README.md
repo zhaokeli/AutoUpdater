@@ -18,5 +18,5 @@ wpf自动在线更新程序
 
 升级服务器的路径配置写到Constants.cs类中。
 使用方法如下，在要升级的运用程序项目的Main函数中，加上一行语句:
-Ezhu.AutoUpdater.Updater.CheckUpdateStatus();
+Ank.AutoUpdater.Updater.CheckUpdateStatus();
 

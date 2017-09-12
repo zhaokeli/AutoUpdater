@@ -8,7 +8,7 @@
     <ProjectGuid>{4CEADF71-8032-47FE-A357-D6F4023261CF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ezhu.AutoUpdater</RootNamespace>
+    <RootNamespace>Ank.AutoUpdater</RootNamespace>
     <AssemblyName>AutoUpdater</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Ezhu.AutoUpdater.Program</StartupObject>
+    <StartupObject>Ank.AutoUpdater.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>download.ico</ApplicationIcon>

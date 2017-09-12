@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ezhu.AutoUpdater
+namespace Ank.AutoUpdater
 {
     public class ConfigManage
     {

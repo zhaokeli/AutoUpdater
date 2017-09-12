@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Ezhu.AutoUpdater
+namespace Ank.AutoUpdater
 {
     /// <summary>
     /// WindowBase.xaml 的交互逻辑

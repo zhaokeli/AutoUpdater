@@ -5,7 +5,7 @@ using System.Windows;
 
 using System.Xml.Linq;
 
-namespace Ezhu.AutoUpdater
+namespace Ank.AutoUpdater
 {
     public class Updater
     {

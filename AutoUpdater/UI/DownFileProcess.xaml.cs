@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 
-namespace Ezhu.AutoUpdater.UI
+namespace Ank.AutoUpdater.UI
 {
     public partial class DownFileProcess : WindowBase
     {

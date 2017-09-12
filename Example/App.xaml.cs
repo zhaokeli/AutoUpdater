@@ -18,7 +18,7 @@ namespace Example
         }
         void App_Startup(object sender, StartupEventArgs e)
         {
-            Ezhu.AutoUpdater.Updater.CheckUpdateStatus();
+            Ank.AutoUpdater.Updater.CheckUpdateStatus();
         }
         
     }
